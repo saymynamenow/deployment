@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 app.use(cookieParser());
-app.use("/api/auth", authRoute);
+app.use("/auth", authRoute);
 app.use("/api/", authenticate, doRoute);
 
 app.listen(3000, () => {
